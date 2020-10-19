@@ -26,12 +26,16 @@ Route::get('r1', function(){
 Route::get('r2', function(){
     return view('welcome');
 });
-Route::get('hello/{name}',function($name){
+/*Route::get('hello/{name}',function($name){
     return'Hello,'.$name;
 });
 Route::get('hello/{name?}',function($name='Everybody'){
 return'Hello,'.$name;
-});
+});*/
 Route::get('r3', function(){
     return view('welcome');
 });
+Route::get('hello/{name?}', function ($name='Everybody') {
+    return 'Hello, '.$name;
+})->name('hello.index');
+
