@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 /*Route::get('/',function(){
     return'welcome';
 });*/
-Route::get('/',function(){
+/*Route::get('/',function(){
     return redirect('r1');
-});
-
+});*/
+Route::get('/', 'App\Http\Controllers\HomesController@index');
 Route::get('r1', function(){
     return redirect('r2');
 });

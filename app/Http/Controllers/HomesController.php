@@ -14,6 +14,7 @@ class HomesController extends Controller
     public function index()
     {
         //
+        return 'index';
     }
 
     /**
