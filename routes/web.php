@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 /*Route::get('/',function(){
     return redirect('r1');
 });*/
-Route::get('/', 'App\Http\Controllers\HomesController@index');
+//Route::get('/', 'App\Http\Controllers\HomesController@index')->name('home.index');
+Route::get('/', [HomesController::class, 'index'])->name('home.index');
 Route::get('r1', function(){
     return redirect('r2');
 });
